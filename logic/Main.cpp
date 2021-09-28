@@ -14,6 +14,7 @@ using std::ostringstream;
 using std::string;
 using namespace std;
  // this is class 
+ 
 class Company
 {
 public:
