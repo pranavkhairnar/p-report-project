@@ -1,14 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-     
-     <h1><%= company %></h1>
+
+    <h1><%= name_of_company %></h1>
+    <h1><%= n_1718 %></h1>
+    <h1><%= s_1718 %></h1>
+    <h1><%= n_1819 %></h1>
+    <h1><%= s_1819 %></h1>
+    <h1><%= n_1920 %></h1>
+    <h1><%= s_1920 %></h1>
+    <h1><%= n_2021 %></h1>
+    <h1><%= s_2021 %></h1>
+    <h1><%= object1[0].Name  %></h1>
+    <%= object1[0].Name %>
+    <%= object1[0].N1718 %>
+    <%= object1[0].Salary1718 %>
+    <%= object1[0].N1819 %>
+    <%= object1[0].Salary1819 %>
+    <%= object1[0].N1920 %>
+    <%= object1[0].Salary1920 %>
+    <%= object1[0].N2021 %>
+    <%= object1[0].Salary2021 %>
+
+
+    <ul>
+        <% for(var i=0; i<object1.length; i++) { %>
+        <li>
+            <%= object1[i].Name %>
+            <%= object1[i].N1718 %>
+            <%= object1[i].Salary1718 %>
+            <%= object1[i].N1819 %>
+            <%= object1[i].Salary1819 %>
+            <%= object1[i].N1920 %>
+            <%= object1[i].Salary1920 %>
+            <%= object1[i].N2021 %>
+            <%= object1[i].Salary2021 %>
+        </li>
+        <% } %>
+    </ul>
 </head>
+
 <body>
 
 </body>
+
 </html>
