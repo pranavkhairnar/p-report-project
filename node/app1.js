@@ -27,7 +27,7 @@ app.set('views', __dirname);
 
 MongoClient.connect(url, function (err, db) {
   if (err) throw err;
-  var dbo = db.db("Reports");
+  var dbo = db.db("reports");
   dbo.collection("year_data").find({}, {
     projection: {}
   }).toArray(function (err, result) {
