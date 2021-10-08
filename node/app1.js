@@ -27,13 +27,13 @@ app.set('views', __dirname);
 
 MongoClient.connect(url, function (err, db) {
   if (err) throw err;
-  var dbo = db.db("reports");
+  var dbo = db.db("Reports");
   dbo.collection("year_data").find({}, {
     projection: {}
   }).toArray(function (err, result) {
     if (err) throw err;
     
-    console.log(result[0].Name);
+    console.log(result);
     var p1 = "-";
     for (let i = 1; i < 241; i++) {
      
@@ -60,8 +60,6 @@ MongoClient.connect(url, function (err, db) {
         result[i-1].N1920=p1;
       }
      
-      
-
 
       if (result[i - 1].Salary2021 == "-1") {
         result[i - 1].Salary2021=p1;
@@ -78,18 +76,12 @@ MongoClient.connect(url, function (err, db) {
 });
 
 app.get('/', function (req, res) {
+  /*
   res.render('index.ejs', {
-    name_of_company: name_of_company,
-    n_1718: n_1718,
-    s_1718: s_1718,
-    n_1819: n_1819,
-    s_1819: s_1819,
-    n_1920: n_1920,
-    s_1920: s_1920,
-    n_2021: n_2021,
-    s_2021: s_2021,
     object1: object1
   });
+  */
+  res.send(object1);
 });
 app.listen(3000, function () {
   console.log("Server is started");
